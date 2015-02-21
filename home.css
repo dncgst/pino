@@ -1,0 +1,77 @@
+/* home.css
+   Home page style of the 'Pirro Nord: WebGIS approach' project | PiNo */
+
+body{
+    font-size: 1em;
+    font-family: serif, sans-serif;
+    text-align: justify;
+}
+aside{
+    width: 15%;
+    float: left;
+    margin-top: 10px;
+}
+aside h2{
+    text-align: left;
+    margin: 20px;
+}
+aside nav ul{
+    list-style-type: none;
+    margin: 20px;
+    padding: 0px;
+}
+aside nav ul li{
+    list-style-type: disc;
+    margin-bottom:10px;
+}
+aside nav ul li a:link, aside nav ul li a:visited{
+    color: #0000FF;
+    text-decoration: none;
+}
+aside nav ul li a:active, aside nav ul li a:hover{
+    color: #000000;
+    text-decoration: none;
+}
+article{
+    width: 80%;
+    float: right;
+    margin-top: 10px;
+    border-left-width: 1px;
+    border-left-color: #A6A6A6;
+    border-left-style: dashed;
+    padding-left: 3%;
+    padding-right: 1%;
+}
+article p a:link, article p a:visited{
+    color: #0000FF;
+    text-decoration: none;
+}
+article p a:active, article p a:hover{
+    color: #000000;
+    text-decoration: none;
+}
+article dl dt{
+    font-style: normal;
+    font-weigth: bold;
+    margin-bottom: 10px;
+}
+article dl dd{
+    margin-bottom:10px;
+}
+footer{
+    height: 50px;
+    font-size: 0.8em;
+    text-align: center;
+    border-top-width: 1px;
+    border-top-color: #A6A6A6;
+    border-top-style: dashed;
+    clear: both;
+}
+footer address a:link, footer address a:visited{
+    color: #0000FF;
+    text-decoration: none;
+}
+footer address a:active, footer address a:hover{
+    color: #000000;
+    text-decoration: none;
+}

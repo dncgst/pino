@@ -1,0 +1,265 @@
+<! doctype html>
+<!-- data_entry.html
+     Data Entry page of the 'Pirro Nord: a WebGIS approach' project | PiNo -->
+
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="data_entry.css">
+  <title>Pirro Nord: a WebGIS approach | Data Entry</title>
+  <meta charset="utf-8">
+  <meta name="application-name" content="PiNo">
+  <meta name="author" content="Domenico Giusti <dncgst@gnewarchaeology.it>">
+  <meta name="description" content="PiNo Data Entry form">
+  <meta name="generator" content="GNU Emacs 23.4.1">
+  <meta name="keywords" content="Pirro Nord, PiNo, Data Entry">
+  <meta http-equiv="Refresh" content="300">
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <!-- Logo -->
+    <h1><a href="home.html"><img id="top" src="images/pirro.jpg" alt="Pirro Nord WebGIS" width="100%" height="150"></a></h1>
+  </header>
+  <!-- aside/nav-->
+  <aside>
+    <h2>Menu</h2>
+    <nav>
+      <ul>
+	<li><a href="data_entry.html"> Data Entry</a></li>
+	<li><a href="data_edit.php">Data Edit</a></li>
+	<li><a href="data_view.php">Data View</a></li>
+	<li><a href="data_export.php">Data Export</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <!-- section/form -->
+  <section>
+    <h2><em>PiNo</em> Data Entry</h2>
+
+    <!-- site form -->
+    <p>Inserisci queste info una volta sola, il primo giorno di scavo</p>
+    <form id="site" enctype="text/plan" action="data_entry.php" method="REQUEST">
+      <input type="hidden" name="redirect" value="data_entry.html"/>
+      <ul>
+	<fieldset>
+	  <legend>Site information</legend>
+	  <li>
+	    <label for="nome">Nome:</label>
+	    <input type="text" name="nome" id="nome" value="" placeholder="Pirro Nord 13"/>
+	  </li>
+	  <li>
+	    <label for="comune">Comune:</label>
+	    <input type="text" name="comune" id="comune" value="" placeholder="Apricena"/>
+	  </li>
+	  <li>
+	    <label for="provincia">Provincia:</label>
+	    <input type="text" name="provincia" id="provincia" value="" placeholder="Foggia"/>
+	  </li>
+	  <li>
+	    <label for="nazione">Nazione:</label>
+	    <input type="text" name="nazione" id="nazione" value="" placeholder="Italia"/>
+	  </li>
+	  <li>
+	    <label for="data">Data:</label>
+	    <input type="date" name="data" id="data_scavo" value="" placeholder="YYYY/MM/DD"/>
+	  </li>
+	  <li>
+	    <label for="oss">Oss:</label>
+	    <input type="text" name="oss" id="oss_scavo" value="" placeholder=""/>
+	  </li>
+	</fieldset>
+	<input type="submit" value="Submit"/>
+      </ul>
+    </form>
+
+    <!-- record form -->
+    <p>Enter information regarding the record.</p>
+    <form id="record" enctype="text/plain" action="data_entry.php" method="REQUEST">
+      <input type="hidden" name="redirect" value="data_entry.html"/>
+      <ul>
+	<fieldset>
+	  <legend>Base information</legend>
+	  <li>
+	    <label for="data">Data:</label>
+	    <input type="date" name="data" id="data" value="" placeholder="like: yyyy/mm/dd" required/>
+	  </li>
+	  <li>
+	    <label for="taglio">US:</label>
+	    <input type="text" name="taglio" id="taglio" value="" placeholder="like: B52" required/>
+	  </li>
+	  <li>
+	    <label for="q">Q:</label>
+	    <input type="text" name="q" id="q" value="" placeholder="like: A1" required/>
+	  </li>
+	  <li>
+	    <label for="oss">Oss:</label>
+	    <input type="text" name="oss" id="oss_scavo" value="" placeholder=""/>
+	  </li>
+</filedset></br>
+</ul>
+</form>
+
+<!-- coordinati form -->
+<p>Enter information per coordinati.</p>
+<form id="coord" enctype="text/plain" action="data_entry.php" method="REQUEST">
+  <input type="hidden" name="redirect" value="data_entry.html"/>
+  <ul>
+    <fieldset>
+    </fieldset></br>
+    <input type="submit" value="Submit"/>
+  </ul>
+</form>
+
+<li>
+	     <label for="desc">Descrizione:</label>
+	     <select name="descrizione" id="desc" required/>
+	     <option value="">Select type of record</option>
+	     <option value="OSSO">OSSO</option>
+	     <option value="DENTE">DENTE</option>
+	     <option value="SELCE">SELCE</option>
+	     <option value="PIETRA">PIETRA</option>
+             </select>
+          </li>
+        </fieldset></br>
+</ul>
+</form>
+
+	  <li>
+	    <label for="n">N:</label>
+	    <input type="text" name="n" id="n" value="" placeholder="like: P01" required/>
+	  </li
+
+        <fieldset>
+	  <legend>Fabric information</legend>
+          <li>O:
+	    <table>
+	      <tr>
+		<td id="na" colspan="4">
+		  <label for="na">[NA]</label> <input type="radio" name="o" id="na" value="NA" checked="checked">
+		</td>
+	      </tr>
+	      <tr>
+		<td>
+		  <label for="n/s">N/S</label> <input type="radio" name="o" id="n/s" value="N/S"/>
+		</td>
+		<td>
+		  <label for="ne/sw">NE/SW</label> <input type="radio" name="o" id="ne/sw" value="NE/SW"/>
+		</td>
+		<td>
+		  <label for="e/w">E/W</label> <input type="radio" name="o" id="e/w" value="E/W"/>
+		</td>
+		<td>
+		  <label for="nw/se">NW/SE</label> <input type="radio" name="o" id="nw/se" value="NW/SE"/>
+		</td>
+	      </tr>
+	  </li>
+	  </table>
+	  <li>P:
+	    <table>
+	      <tr>
+		<td id="na" colspan="8">
+		  <label for="na">[NA]</label> <input type="radio" name="p" id="na" value="NA" checked="checked"/>
+		</td>
+	      </tr>
+	      <tr>
+		<td>
+		  <label for="n">N</label> <input type="radio" name="p" id="n" value="N"/>
+		</td>
+		<td>
+		  <label for="ne">NE</label> <input type="radio" name="p" id="ne" value="NE"/>
+		</td>
+		<td>
+		  <label for="e">E</label> <input type="radio" name="p" id="e" value="E"/>
+		</td>
+		<td>
+		  <label for="se">SE</label> <input type="radio" name="p" id="se" value="SE"/>
+		</td>
+		<td>
+		  <label for="s">S</label> <input type="radio" name="p" id="s" value="S"/>
+		</td>
+		<td>
+		  <label for="sw">SW</label> <input type="radio" name="p" id="sw" value="SW"/>
+		</td>
+		<td>
+		  <label for="w">W</label> <input type="radio" name="p" id="w" value="W"/>
+		</td>
+		<td>
+		  <label for="nw">NW</label> <input type="radio" name="p" id="nw" value="NW"/></br>
+		</td>
+	      </tr>
+	      <tr>
+		<td>
+		  <label for="p">P</label> <input type="radio" name="p" id="p" value="P"/>
+		</td>
+		<td>
+		  <label for="VL">VL</label> <input type="radio" name="p" id="VL" value="VL"/>
+		</td>
+		<td>
+		  <label for="Vl">Vl</label> <input type="radio" name="p" id="Vl" value="Vl"/>
+		</td>
+		<td>
+		  <label for="Vs">Vs</label> <input type="radio" name="p" id="Vs" value="Vs"/>	  
+		</td>
+	      </tr>
+	  </li>
+	  </table>
+	</fieldset></br>
+	<fieldset>
+	  <legend>Dimension information</legend>
+	  <li>
+	    <label for="l_max">L:</label>
+	    <input type="text" name="l_max" id="l_max" value="" required/>
+	  </li>
+	  <li>
+	    <label for="l_med">l:</label>
+	    <input type="text" name="l_med" id="l_med" value="" required/>
+	  </li>
+	  <li>
+	    <label for="s_min">s:</label>
+	    <input type="text" name="s_min" id="s_min" value="" required/>
+	  </li>
+	</fieldset></br>
+	<fieldset>
+	  <legend>Observations</legend>
+	  <label for="oss">Osservazioni:</label>
+	    <textarea name="oss" id="oss" cols="40" rows="2" pattern="[A-Z][0-9]"></textarea>
+	</fieldset></br>
+	<input type="submit" value="Submit"/>
+</ul>
+</form>
+
+    <!-- upload csv file -->
+    <p>Please, upload Total Station points file in <a href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> format before fill records information in the form below,</br>if you haven't done it yet.</p>
+    <form id="upload" enctype="multipart/form-data" action="data_upload.php" method="POST">
+      <input type="hidden" name="redirect" value="data_entry.html"/>
+      <ul>
+	<fieldset>
+	  <legend>Spatial Information</legend>
+	  <li>
+	    <label for="points">Points:</label>
+	    <input type="file" name="points" id="points" value=""/>
+	  </li>
+	</fieldset></br>
+	<input type="submit" value="Upload"/>
+      </ul>
+    </form></br>
+
+<!-- top button -->
+<a href="#top" target="_top"><button type="button" style="margin-left: 50px;">Top</button></a></br></br>
+</section>
+
+<!-- footer -->
+<footer>
+  <address>
+    <p>To report a problem or to suggest improvements with <em>PiNo</em> e-mail <a href="mailto:info@gnewarchaeology.it">info@gnewarchaeology.it</a>. <em>PiNo</em> source code is copyleft available <a href="https://github.com/dncgst/pirronord.p13">here</a>.</p>
+  </address>
+  <nav>
+    <p>
+      <a href="about.html">About</a>
+      <a href="credits.html">Credits</a>
+      <a href="tos.html">Terms of Service</a>
+    </p>
+  </nav>
+</footer>
+</body>
+</html>
